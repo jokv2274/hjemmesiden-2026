@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bilder</title>
+    <meta name="description" content="Bilder og portefølje for John-Olav Kvarme." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="inner-page">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">John-Olav Kvarme</a>
+        <nav class="nav" aria-label="Hovednavigasjon">
+          <a href="bilder.html" class="active">Bilder</a>
+          <a href="om-meg.html">Om meg</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a href="admin.html" class="nav-admin-link">Logg inn</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="container orbit-section">
+        <div class="gallery-intro">
+          <p>Utforsk porteføljen – fra virkelige øyeblikk til digitale visjoner.</p>
+        </div>
+        <div class="swiper mySwiper gallery-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="bilde-1.html" aria-label="Gå til bilde 1">
+                <img src="Bilder%20forside/a1.jpg" alt="Bilde 1" />
+                <span class="slide-title">AI‑kunst: Lys og drøm</span>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="bilde-2.html" aria-label="Gå til bilde 2">
+                <img src="Bilder%20forside/2.jpg" alt="Bilde 2" />
+                <span class="slide-title">Dyr</span>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="bilde-3.html" aria-label="Gå til bilde 3">
+                <img src="Bilder%20forside/3a.jpg" alt="Ferie" />
+                <span class="slide-title">Ferie</span>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="bilde-4.html" aria-label="Gå til bilde 4">
+                <img src="Bilder%20forside/4a.jpg" alt="Bilde 4" />
+                <span class="slide-title">Natur</span>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="bilde-5.html" aria-label="Gå til bilde 5">
+                <img src="Bilder%20forside/5a.jpg" alt="Bilde 5" />
+                <span class="slide-title">By / Urban</span>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="bilde-6.html" aria-label="Gå til bilde 6">
+                <img src="Bilder%20forside/6a.jpg" alt="Kreative prosjekter" />
+                <span class="slide-title">Kreative prosjekter</span>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="bilde-7.html" aria-label="Gå til bilde 7">
+                <img src="Bilder%20forside/7a.jpg" alt="Bilde 7" />
+                <span class="slide-title">Humor</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      const swiper = new Swiper('.mySwiper', {
+        direction: 'horizontal',
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        loop: true,
+        loopAdditionalSlides: 1,
+        slidesPerGroup: 1,
+        speed: 900,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        coverflowEffect: {
+          rotate: 30,
+          stretch: 0,
+          depth: 200,
+          modifier: 1.2,
+          slideShadows: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-prev',
+          prevEl: '.swiper-button-next',
+        },
+      });
+
+      // Handle hover for slide titles
+      document.querySelectorAll('.gallery-swiper .swiper-slide a').forEach(link => {
+        const title = link.querySelector('.slide-title');
+        if (title) {
+          link.addEventListener('mouseenter', () => {
+            title.style.opacity = '1';
+          });
+          link.addEventListener('mouseleave', () => {
+            title.style.opacity = '0';
+          });
+        }
+      });
+
+      // Protect images from copying and right-click
+      document.querySelectorAll('.gallery-swiper img').forEach(img => {
+        img.addEventListener('contextmenu', e => e.preventDefault());
+        img.addEventListener('dragstart', e => e.preventDefault());
+        img.addEventListener('copy', e => e.preventDefault());
+      });
+
+      // Disable text selection and copy on entire page
+      document.addEventListener('copy', e => {
+        e.preventDefault();
+      });
+      document.addEventListener('contextmenu', e => {
+        const target = e.target;
+        if (target.tagName === 'IMG' || target.closest('.gallery-swiper')) {
+          e.preventDefault();
+        }
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

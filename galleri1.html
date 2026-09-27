@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galleri – AI‑kunst</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="inner-page">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">John-Olav Kvarme</a>
+        <nav class="nav" aria-label="Hovednavigasjon">
+          <a href="bilder.html">Bilder</a>
+          <a href="om-meg.html">Om meg</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a href="admin.html" class="nav-admin-link">Logg inn</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="container gallery-full">
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <a href="bilde-1.html">
+              <img src="Bilder%20forside/a1.jpg" alt="AI‑kunst: Lys og drøm" />
+              <span class="gallery-label">AI‑kunst: Lys og drøm</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="gallery-back">
+          <a href="bilder.html" class="primary-btn">Tilbake til bilder</a>
+        </div>
+      </section>
+    </main>
+
+    <div class="lightbox-overlay">
+      <div class="lightbox-content">
+        <img src="" alt="" />
+      </div>
+    </div>
+
+    <script>
+      const grid = document.querySelector('.gallery-grid');
+      const lightbox = document.querySelector('.lightbox-overlay');
+      const lightboxImg = lightbox.querySelector('img');
+      const closeLightbox = () => lightbox.classList.remove('active');
+
+      grid.addEventListener('click', e => {
+        const link = e.target.closest('.gallery-item a');
+        if (!link) return;
+        e.preventDefault();
+        const img = link.querySelector('img');
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+      });
+      grid.addEventListener('contextmenu', e => {
+        if (e.target.closest('.gallery-item')) e.preventDefault();
+      });
+      grid.addEventListener('dragstart', e => {
+        if (e.target.closest('.gallery-item')) e.preventDefault();
+      });
+      document.addEventListener('copy', e => e.preventDefault());
+
+      lightbox.querySelector('.lightbox-content').addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', e => {
+        if (e.target === lightbox) closeLightbox();
+      });
+      document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') closeLightbox();
+      });
+
+      window.GALLERY_CATEGORY = 'ai-kunst';
+    </script>
+    <script type="module" src="gallery-loader.js?v=2"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

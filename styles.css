@@ -1213,6 +1213,10 @@ h1 em {
   visibility: visible;
 }
 
+body.lightbox-open {
+  overflow: hidden;
+}
+
 .lightbox-content {
   position: relative;
   max-width: 92vw;

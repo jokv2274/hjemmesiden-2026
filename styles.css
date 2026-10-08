@@ -1215,8 +1215,11 @@ h1 em {
 
 .lightbox-content {
   position: relative;
-  max-width: 90vw;
-  max-height: 88vh;
+  max-width: 92vw;
+  max-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transform: scale(0.92);
   transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -1227,10 +1230,11 @@ h1 em {
 
 .lightbox-content img {
   display: block;
-  max-width: 90vw;
-  max-height: 88vh;
+  max-width: 92vw;
+  max-height: 90vh;
   width: auto;
   height: auto;
+  object-fit: contain;
   border-radius: 14px;
   border: 1px solid var(--border);
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);

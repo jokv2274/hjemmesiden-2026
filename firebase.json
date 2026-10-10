@@ -16,7 +16,13 @@
       "storage.rules"
     ],
     "rewrites": [
-      { "source": "/dyr", "destination": "/galleri2.html" }
+      { "source": "/ai-kunst", "destination": "/galleri1.html" },
+      { "source": "/dyr", "destination": "/galleri2.html" },
+      { "source": "/ferie", "destination": "/galleri3.html" },
+      { "source": "/natur", "destination": "/galleri4.html" },
+      { "source": "/by", "destination": "/galleri5.html" },
+      { "source": "/kreative-prosjekter", "destination": "/galleri6.html" },
+      { "source": "/humor", "destination": "/galleri7.html" }
     ]
   }
 }

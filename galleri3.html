@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261011" />
+    <link rel="stylesheet" href="styles.css?v=20261011b" />
   </head>
   <body class="inner-page">
     <header class="topbar">
@@ -161,12 +161,10 @@
         if (!link) return;
         e.preventDefault();
         const img = link.querySelector('img');
-        lightboxImg.onload = () => {
-          lightbox.classList.add('active');
-          document.body.classList.add('lightbox-open');
-        };
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
+        lightbox.classList.add('active');
+        document.body.classList.add('lightbox-open');
       });
       grid.addEventListener('contextmenu', e => {
         if (e.target.closest('.gallery-item')) e.preventDefault();

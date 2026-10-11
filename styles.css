@@ -1215,8 +1215,10 @@ h1 em {
   visibility: visible;
 }
 
+html.lightbox-open,
 body.lightbox-open {
   overflow: hidden;
+  height: 100%;
 }
 
 .lightbox-content {

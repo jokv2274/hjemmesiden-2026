@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261011e" />
+    <link rel="stylesheet" href="styles.css?v=20261011f" />
   </head>
   <body class="inner-page">
     <header class="topbar">
@@ -75,6 +75,7 @@
       const lightboxImg = lightbox.querySelector('img');
       const closeLightbox = () => {
         lightbox.classList.remove('active');
+        document.documentElement.classList.remove('lightbox-open');
         document.body.classList.remove('lightbox-open');
       };
 
@@ -85,9 +86,8 @@
         const img = link.querySelector('img');
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
-        document.documentElement.scrollTop = 0;
-        document.body.scrollTop = 0;
         lightbox.classList.add('active');
+        document.documentElement.classList.add('lightbox-open');
         document.body.classList.add('lightbox-open');
       });
       grid.addEventListener('contextmenu', e => {

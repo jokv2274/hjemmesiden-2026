@@ -163,9 +163,10 @@
         const img = link.querySelector('img');
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
         lightbox.classList.add('active');
         document.body.classList.add('lightbox-open');
-        window.scrollTo(0, 0);
       });
       grid.addEventListener('contextmenu', e => {
         if (e.target.closest('.gallery-item')) e.preventDefault();

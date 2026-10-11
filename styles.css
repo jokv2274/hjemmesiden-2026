@@ -1217,6 +1217,10 @@ h1 em {
 
 body.lightbox-open {
   overflow: hidden;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .lightbox-content {

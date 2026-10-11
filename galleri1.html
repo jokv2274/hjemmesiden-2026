@@ -59,10 +59,12 @@
         if (!link) return;
         e.preventDefault();
         const img = link.querySelector('img');
+        lightboxImg.onload = () => {
+          lightbox.classList.add('active');
+          document.body.classList.add('lightbox-open');
+        };
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
-        lightbox.classList.add('active');
-        document.body.classList.add('lightbox-open');
       });
       grid.addEventListener('contextmenu', e => {
         if (e.target.closest('.gallery-item')) e.preventDefault();

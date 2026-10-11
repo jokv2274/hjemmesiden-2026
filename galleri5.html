@@ -87,6 +87,7 @@
         lightboxImg.alt = img.alt;
         lightbox.classList.add('active');
         document.body.classList.add('lightbox-open');
+        window.scrollTo(0, 0);
       });
       grid.addEventListener('contextmenu', e => {
         if (e.target.closest('.gallery-item')) e.preventDefault();

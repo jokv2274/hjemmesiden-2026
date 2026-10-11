@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css?v=20261011d" />
+    <link rel="stylesheet" href="styles.css?v=20261011e" />
   </head>
   <body class="inner-page">
     <header class="topbar">
@@ -55,25 +55,20 @@
       const grid = document.querySelector('.gallery-grid');
       const lightbox = document.querySelector('.lightbox-overlay');
       const lightboxImg = lightbox.querySelector('img');
-      let scrollPosition = 0;
-      
       const closeLightbox = () => {
         lightbox.classList.remove('active');
         document.body.classList.remove('lightbox-open');
-        window.scrollTo(0, scrollPosition);
       };
 
       grid.addEventListener('click', e => {
         const link = e.target.closest('.gallery-item a');
         if (!link) return;
         e.preventDefault();
-        scrollPosition = window.pageYOffset;
         const img = link.querySelector('img');
         lightboxImg.src = img.src;
         lightboxImg.alt = img.alt;
         lightbox.classList.add('active');
         document.body.classList.add('lightbox-open');
-        document.body.style.top = `-${scrollPosition}px`;
       });
       grid.addEventListener('contextmenu', e => {
         if (e.target.closest('.gallery-item')) e.preventDefault();

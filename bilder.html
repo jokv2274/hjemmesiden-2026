@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="nb">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -26,55 +26,39 @@
 
     <main class="page-shell">
       <section class="container orbit-section">
-        <div class="gallery-intro">
-          <p>Utforsk porteføljen – fra virkelige øyeblikk til digitale visjoner.</p>
+        <div class="gallery-intro category-intro">
+          <span class="eyebrow">Utforsk porteføljen</span>
+          <h1>Bilder</h1>
+          <p>Fra virkelige øyeblikk til digitale visjoner. Velg en kategori for å se bildene.</p>
         </div>
+
         <div class="swiper mySwiper gallery-swiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-              <a href="galleri1.html" aria-label="Gå til AI-kunst galleri">
-                <img src="Bilder%20forside/a1.jpg" alt="AI-kunst" />
-                <span class="slide-title">AI‑kunst: Lys og drøm</span>
-              </a>
+              <a href="galleri1.html" aria-label="Gå til AI-kunst"><img src="Bilder%20forside/a1.jpg" alt="AI-kunst" /><span class="slide-title">AI-kunst</span></a>
             </div>
             <div class="swiper-slide">
-              <a href="galleri2.html" aria-label="Gå til dyr galleri">
-                <img src="Bilder%20forside/2.jpg" alt="Dyr" />
-                <span class="slide-title">Dyr</span>
-              </a>
+              <a href="galleri2.html" aria-label="Gå til Dyr"><img src="Bilder%20forside/hjort-hjorteflokk-kronhjort-i-skog-morgenlys-01.jpg" alt="Kronhjort i skogen" /><span class="slide-title">Dyr</span></a>
             </div>
             <div class="swiper-slide">
-              <a href="galleri3.html" aria-label="Gå til ferie galleri">
-                <img src="Bilder%20forside/3a.jpg" alt="Ferie" />
-                <span class="slide-title">Ferie</span>
-              </a>
+              <a href="galleri3.html" aria-label="Gå til Ferie"><img src="Bilder%20forside/paskeoya-ahu-tongariki-15-moai-2001-mittblikk.jpg" alt="Påskeøya – Ahu Tongariki" /><span class="slide-title">Ferie</span></a>
             </div>
             <div class="swiper-slide">
-              <a href="galleri4.html" aria-label="Gå til natur galleri">
-                <img src="Bilder%20forside/4a.jpg" alt="Natur" />
-                <span class="slide-title">Natur</span>
-              </a>
+              <a href="bilder-fugl.html" aria-label="Gå til Fugl"><img src="Bilder%20forside/paafugl-med-full-fjaerdrakt-utbrettet-hale-01.jpg" alt="Påfugl med full fjærdrakt" /><span class="slide-title">Fugl</span></a>
             </div>
             <div class="swiper-slide">
-              <a href="galleri5.html" aria-label="Gå til by og urban galleri">
-                <img src="Bilder%20forside/5a.jpg" alt="By / Urban" />
-                <span class="slide-title">By / Urban</span>
-              </a>
+              <a href="bilder-norge.html" aria-label="Gå til Norge"><img src="Bilder%20forside/norge-helleren-jossingfjord-rod-hus-under-heller-proff-mittblikk.jpg" alt="Helleren i Jøssingfjord" /><span class="slide-title">Norge</span></a>
             </div>
             <div class="swiper-slide">
-              <a href="galleri6.html" aria-label="Gå til kreative prosjekter galleri">
-                <img src="Bilder%20forside/6a.jpg" alt="Kreative prosjekter" />
-                <span class="slide-title">Kreative prosjekter</span>
-              </a>
+              <a href="galleri5.html" aria-label="Gå til By og urban"><img src="Bilder%20forside/5a.jpg" alt="By / Urban" /><span class="slide-title">By / Urban</span></a>
             </div>
             <div class="swiper-slide">
-              <a href="galleri7.html" aria-label="Gå til humor galleri">
-                <img src="Bilder%20forside/7a.jpg" alt="Humor" />
-                <span class="slide-title">Humor</span>
-              </a>
+              <a href="galleri6.html" aria-label="Gå til Kreative prosjekter"><img src="Bilder%20forside/6a.jpg" alt="Kreative prosjekter" /><span class="slide-title">Kreative prosjekter</span></a>
+            </div>
+            <div class="swiper-slide">
+              <a href="galleri7.html" aria-label="Gå til Humor"><img src="Bilder%20forside/7a.jpg" alt="Humor" /><span class="slide-title">Humor</span></a>
             </div>
           </div>
-
           <div class="swiper-button-next"></div>
           <div class="swiper-button-prev"></div>
           <div class="swiper-pagination"></div>
@@ -84,66 +68,24 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-      const swiper = new Swiper('.mySwiper', {
-        direction: 'horizontal',
-        effect: 'coverflow',
+      const swiper = new Swiper(".mySwiper", {
+        direction: "horizontal",
+        effect: "coverflow",
         grabCursor: true,
         centeredSlides: true,
-        slidesPerView: 'auto',
+        slidesPerView: "auto",
         loop: true,
         loopAdditionalSlides: 1,
         slidesPerGroup: 1,
         speed: 900,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        coverflowEffect: {
-          rotate: 30,
-          stretch: 0,
-          depth: 200,
-          modifier: 1.2,
-          slideShadows: false,
-        },
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        navigation: {
-          nextEl: '.swiper-button-prev',
-          prevEl: '.swiper-button-next',
-        },
+        autoplay: { delay: 2500, disableOnInteraction: false },
+        coverflowEffect: { rotate: 30, stretch: 0, depth: 200, modifier: 1.2, slideShadows: false },
+        pagination: { el: ".swiper-pagination", clickable: true },
+        navigation: { nextEl: ".swiper-button-next", prevEl: ".swiper-button-prev" }
       });
-
-      // Handle hover for slide titles
-      document.querySelectorAll('.gallery-swiper .swiper-slide a').forEach(link => {
-        const title = link.querySelector('.slide-title');
-        if (title) {
-          link.addEventListener('mouseenter', () => {
-            title.style.opacity = '1';
-          });
-          link.addEventListener('mouseleave', () => {
-            title.style.opacity = '0';
-          });
-        }
-      });
-
-      // Protect images from copying and right-click
-      document.querySelectorAll('.gallery-swiper img').forEach(img => {
-        img.addEventListener('contextmenu', e => e.preventDefault());
-        img.addEventListener('dragstart', e => e.preventDefault());
-        img.addEventListener('copy', e => e.preventDefault());
-      });
-
-      // Disable text selection and copy on entire page
-      document.addEventListener('copy', e => {
-        e.preventDefault();
-      });
-      document.addEventListener('contextmenu', e => {
-        const target = e.target;
-        if (target.tagName === 'IMG' || target.closest('.gallery-swiper')) {
-          e.preventDefault();
-        }
+      document.addEventListener("copy", (event) => event.preventDefault());
+      document.addEventListener("contextmenu", (event) => {
+        if (event.target.tagName === "IMG" || event.target.closest(".gallery-swiper")) event.preventDefault();
       });
     </script>
     <script src="script.js"></script>

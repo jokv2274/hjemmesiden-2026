@@ -86,12 +86,19 @@ uploadForm.addEventListener("submit", async (e) => {
   }
 });
 
+// Noen kategorier ble slått sammen (Dyr + Natur -> Dyr & natur). Vi viser fortsatt
+// bilder som ble lastet opp med de gamle kategori-nøklene i admin-oversikten.
+const LEGACY_CATEGORY_ALIASES = {
+  "dyr-natur": ["dyr-natur", "dyr", "natur"],
+};
+
 async function loadImages(category) {
   imageList.innerHTML = "";
 
+  const categories = LEGACY_CATEGORY_ALIASES[category] || [category];
   const q = query(
     collection(db, "images"),
-    where("category", "==", category)
+    where("category", "in", categories)
   );
   const snapshot = await getDocs(q);
 

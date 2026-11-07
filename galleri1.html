@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+push<!DOCTYPE html>
 <html lang="no">
   <head>
     <meta charset="UTF-8" />
@@ -24,11 +24,57 @@
 
     <main class="page-shell">
       <section class="container gallery-full">
+        <div class="category-intro">
+          <span class="eyebrow">Digitale visjoner</span>
+          <h1>AI‑kunst</h1>
+          <p>AI-genererte bilder holdes samlet her – aldri blandet med de virkelige feriebildene.</p>
+        </div>
+
+        <div class="filter-bar">
+          <div class="filter-chips">
+            <button type="button" class="chip active" data-filter="alle">Alle</button>
+          </div>
+        </div>
+
         <div class="gallery-grid">
-          <div class="gallery-item">
+          <div class="gallery-item" data-tags="ai">
             <a href="bilde-1.html">
               <img src="Bilder%20forside/a1.jpg" alt="AI‑kunst: Lys og drøm" />
-              <span class="gallery-label">AI‑kunst: Lys og drøm</span>
+            </a>
+          </div>
+          <div class="gallery-item" data-tags="ai">
+            <a href="bilde-1.html">
+              <img src="Bilder%20forside/221.jpg" alt="AI-kunst 221" loading="lazy" />
+            </a>
+          </div>
+          <div class="gallery-item" data-tags="ai">
+            <a href="bilde-1.html">
+              <img src="Bilder%20forside/221_1.jpg" alt="AI-kunst 221 1" loading="lazy" />
+            </a>
+          </div>
+          <div class="gallery-item" data-tags="ai">
+            <a href="bilde-1.html">
+              <img src="Bilder%20forside/221_2.jpg" alt="AI-kunst 221 2" loading="lazy" />
+            </a>
+          </div>
+          <div class="gallery-item" data-tags="ai">
+            <a href="bilde-1.html">
+              <img src="Bilder%20forside/221_3.jpg" alt="AI-kunst 221 3" loading="lazy" />
+            </a>
+          </div>
+          <div class="gallery-item" data-tags="ai">
+            <a href="bilde-1.html">
+              <img src="Bilder%20forside/221_4.jpg" alt="AI-kunst 221 4" loading="lazy" />
+            </a>
+          </div>
+          <div class="gallery-item" data-tags="ai">
+            <a href="bilde-1.html">
+              <img src="Bilder%20forside/221_5.jpg" alt="AI-kunst 221 5" loading="lazy" />
+            </a>
+          </div>
+          <div class="gallery-item" data-tags="ai">
+            <a href="bilde-1.html">
+              <img src="Bilder%20forside/221_6.jpg" alt="AI-kunst 221 6" loading="lazy" />
             </a>
           </div>
         </div>
@@ -40,48 +86,16 @@
     </main>
 
     <div class="lightbox-overlay">
+      <button type="button" class="lightbox-close" aria-label="Lukk">&times;</button>
+      <button type="button" class="lightbox-nav lightbox-prev" aria-label="Forrige bilde">&#8249;</button>
       <div class="lightbox-content">
         <img src="" alt="" />
       </div>
+      <button type="button" class="lightbox-nav lightbox-next" aria-label="Neste bilde">&#8250;</button>
     </div>
 
+    <script src="gallery.js"></script>
     <script>
-      const grid = document.querySelector('.gallery-grid');
-      const lightbox = document.querySelector('.lightbox-overlay');
-      const lightboxImg = lightbox.querySelector('img');
-      const closeLightbox = () => {
-        lightbox.classList.remove('active');
-        document.documentElement.classList.remove('lightbox-open');
-        document.body.classList.remove('lightbox-open');
-      };
-
-      grid.addEventListener('click', e => {
-        const link = e.target.closest('.gallery-item a');
-        if (!link) return;
-        e.preventDefault();
-        const img = link.querySelector('img');
-        lightboxImg.src = img.src;
-        lightboxImg.alt = img.alt;
-        lightbox.classList.add('active');
-        document.documentElement.classList.add('lightbox-open');
-        document.body.classList.add('lightbox-open');
-      });
-      grid.addEventListener('contextmenu', e => {
-        if (e.target.closest('.gallery-item')) e.preventDefault();
-      });
-      grid.addEventListener('dragstart', e => {
-        if (e.target.closest('.gallery-item')) e.preventDefault();
-      });
-      document.addEventListener('copy', e => e.preventDefault());
-
-      lightbox.querySelector('.lightbox-content').addEventListener('click', closeLightbox);
-      lightbox.addEventListener('click', e => {
-        if (e.target === lightbox) closeLightbox();
-      });
-      document.addEventListener('keydown', e => {
-        if (e.key === 'Escape') closeLightbox();
-      });
-
       window.GALLERY_CATEGORY = 'ai-kunst';
     </script>
     <script type="module" src="gallery-loader.js?v=2"></script>

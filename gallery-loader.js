@@ -8,18 +8,23 @@ import {
   getDocs,
 } from "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js";
 
+// GALLERY_CATEGORY kan være en enkelt kategori ("ferie") eller, for sammenslåtte
+// sider som "Dyr & Natur", en liste med gamle + nye kategori-nøkler som skal vises
+// samme sted, f.eks. ["dyr-natur", "dyr", "natur"].
 const category = window.GALLERY_CATEGORY;
+const categories = Array.isArray(category) ? category : category ? [category] : [];
 
 async function loadGalleryImages() {
-  if (!category) return;
+  if (!categories.length) return;
 
   const grid = document.querySelector(".gallery-grid");
   if (!grid) return;
 
   try {
+    // Firestore "in" støtter maks 10 verdier, som er mer enn nok for våre kategorier.
     const q = query(
       collection(db, "images"),
-      where("category", "==", category)
+      where("category", "in", categories)
     );
     const snapshot = await getDocs(q);
 

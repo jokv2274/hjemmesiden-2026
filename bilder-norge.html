@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galleri – Norge</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20261011f" />
+  </head>
+  <body class="inner-page">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">John-Olav Kvarme</a>
+        <nav class="nav" aria-label="Hovednavigasjon">
+          <a href="bilder.html">Bilder</a>
+          <a href="om-meg.html">Om meg</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a href="admin.html" class="nav-admin-link">Logg inn</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="container gallery-full">
+        <div class="category-intro">
+          <span class="eyebrow">Virkelige øyeblikk</span>
+          <h1>Norge</h1>
+          <p>Steder og stemninger fra Norge.</p>
+        </div>
+
+        <div class="filter-bar">
+          <div class="filter-chips">
+            <button type="button" class="chip active" data-filter="alle">Alle</button>
+            <button type="button" class="chip" data-filter="jossingfjord">Jøssingfjord</button>
+            <button type="button" class="chip" data-filter="forlatte-steder">Forlatte steder</button>
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item" data-tags="jossingfjord">
+            <a href="bilde-3.html">
+              <img src="Bilder%20forside/norge-helleren-jossingfjord-rod-hus-under-heller-proff-mittblikk.jpg" alt="Helleren – Jøssingfjord, Norge" />
+              <span class="gallery-label">Helleren – Jøssingfjord, Norge</span>
+            </a>
+          </div>
+          <div class="gallery-item" data-tags="forlatte-steder">
+            <a href="bilde-4.html">
+              <img src="Bilder%20forside/forlatt-hus-med-gran-traer-paa-tak-norge-01.jpg" alt="Forlatt hus med grantrær på taket, Norge" />
+              <span class="gallery-label">Forlatt hus, Norge</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="gallery-back">
+          <a href="bilder.html" class="primary-btn">Tilbake til bilder</a>
+        </div>
+      </section>
+    </main>
+
+    <div class="lightbox-overlay">
+      <button type="button" class="lightbox-close" aria-label="Lukk">&times;</button>
+      <button type="button" class="lightbox-nav lightbox-prev" aria-label="Forrige bilde">&#8249;</button>
+      <div class="lightbox-content">
+        <img src="" alt="" />
+      </div>
+      <button type="button" class="lightbox-nav lightbox-next" aria-label="Neste bilde">&#8250;</button>
+    </div>
+
+    <script src="gallery.js"></script>
+    <script>
+      window.GALLERY_CATEGORY = ['norge'];
+    </script>
+    <script type="module" src="gallery-loader.js?v=2"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

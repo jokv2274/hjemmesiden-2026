@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galleri – Fotokunst</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css?v=20261011f" />
+  </head>
+  <body class="inner-page">
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <a href="index.html" class="brand">John-Olav Kvarme</a>
+        <nav class="nav" aria-label="Hovednavigasjon">
+          <a href="bilder.html">Bilder</a>
+          <a href="om-meg.html">Om meg</a>
+          <a href="kontakt.html">Kontakt</a>
+          <a href="admin.html" class="nav-admin-link">Logg inn</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="container gallery-full">
+        <div class="category-intro">
+          <span class="eyebrow">Fotografi med et kunstnerisk uttrykk</span>
+          <h1>Fotokunst</h1>
+          <p>Fotokunst med motiver fra Norge og steder rundt om i verden.</p>
+        </div>
+
+        <div class="filter-bar">
+          <div class="filter-chips">
+            <button type="button" class="chip active" data-filter="alle">Alle bilder</button>
+          </div>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item" data-tags="fotokunst">
+            <a href="bilde-2.html">
+              <img src="Bilder%20forside/kunst-storm-over-norge-02-mor-med-barn-statue-fjell.jpg.jpg" alt="Mor og barn som skulptur mot et dramatisk norsk fjellandskap" />
+              <span class="gallery-label">Storm over Norge – mor og barn</span>
+            </a>
+          </div>
+          <div class="gallery-item" data-tags="fotokunst">
+            <a href="bilde-2.html">
+              <img src="Bilder%20forside/kunst-storm-over-norge-01-hytte-torvtak-grantrar.jpg.jpg" alt="Hytte med torvtak blant grantrær i et norsk fjellandskap" />
+              <span class="gallery-label">Storm over Norge – hytta i fjellandskapet</span>
+            </a>
+          </div>
+          <div class="gallery-item" data-tags="fotokunst">
+            <a href="bilde-2.html">
+              <img src="Bilder%20forside/kunst-storm-over-norge-03-varmast-pa-fjellet-storm.jpg.jpg" alt="Dramatisk vær over et norsk fjellandskap" />
+              <span class="gallery-label">Storm over Norge – uvær på fjellet</span>
+            </a>
+          </div>
+          <div class="gallery-item" data-tags="fotokunst">
+            <a href="bilde-2.html">
+              <img src="Bilder%20forside/kunst-storm-over-verdens-underverker-01-post-office-bay-nyati.jpg.jpg" alt="Kunstnerisk tolkning av Post Office Bay på Galápagosøyene" />
+              <span class="gallery-label">Verdens underverker – Post Office Bay</span>
+            </a>
+          </div>
+          <div class="gallery-item" data-tags="fotokunst">
+            <a href="bilde-2.html">
+              <img src="Bilder%20forside/kunst-storm-over-verdens-underverker-02-angkor-wat.jpg.jpg" alt="Kunstnerisk tolkning av Angkor Wat i Kambodsja" />
+              <span class="gallery-label">Verdens underverker – Angkor Wat</span>
+            </a>
+          </div>
+          <div class="gallery-item" data-tags="fotokunst">
+            <a href="bilde-2.html">
+              <img src="Bilder%20forside/kunst-storm-over-verdens-underverker-03-potala-palasset-tibet.jpg.jpg" alt="Kunstnerisk tolkning av Potala-palasset i Tibet" />
+              <span class="gallery-label">Verdens underverker – Potala-palasset</span>
+            </a>
+          </div>
+          <div class="gallery-item" data-tags="fotokunst">
+            <a href="bilde-2.html">
+              <img src="Bilder%20forside/kunst-storm-over-verdens-underverker-04-mont-saint-michel.jpg.jpg" alt="Kunstnerisk tolkning av Mont-Saint-Michel i Frankrike" />
+              <span class="gallery-label">Verdens underverker – Mont-Saint-Michel</span>
+            </a>
+          </div>
+          <div class="gallery-item" data-tags="fotokunst">
+            <a href="bilde-2.html">
+              <img src="Bilder%20forside/kunst-storm-over-verdens-underverker-05-taj-mahal.jpg.jpg" alt="Kunstnerisk tolkning av Taj Mahal i India" />
+              <span class="gallery-label">Verdens underverker – Taj Mahal</span>
+            </a>
+          </div>
+          <div class="gallery-item" data-tags="fotokunst">
+            <a href="bilde-2.html">
+              <img src="Bilder%20forside/kunst-storm-over-verdens-underverker-06-paskeoya-moai.jpg.jpg" alt="Kunstnerisk tolkning av moai-statuene på Påskeøya" />
+              <span class="gallery-label">Verdens underverker – moai på Påskeøya</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="gallery-back">
+          <a href="bilder.html" class="primary-btn">Tilbake til bilder</a>
+        </div>
+      </section>
+    </main>
+
+    <div class="lightbox-overlay">
+      <button type="button" class="lightbox-close" aria-label="Lukk">&times;</button>
+      <button type="button" class="lightbox-nav lightbox-prev" aria-label="Forrige bilde">&#8249;</button>
+      <div class="lightbox-content">
+        <img src="" alt="" />
+      </div>
+      <button type="button" class="lightbox-nav lightbox-next" aria-label="Neste bilde">&#8250;</button>
+    </div>
+
+    <script src="gallery.js"></script>
+    <script>
+      window.GALLERY_CATEGORY = 'fotokunst';
+    </script>
+    <script type="module" src="gallery-loader.js?v=2"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

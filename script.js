@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!orbitRing) return;
 
   const gallery = [
-    { src: "Bilder%20forside/a1.jpg", page: "bilde-1.html", alt: "A1 bilde i karusellen" },
+    { src: "Bilder%20forside/AI-kunst/a1.jpg", page: "bilde-1.html", alt: "A1 bilde i karusellen" },
     { src: "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=900&q=80", page: "bilde-2.html", alt: "Solnedgang over kysten" },
     { src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80", page: "bilde-3.html", alt: "Nordlig fjordlandskap i rolig lys" },
     { src: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80", page: "bilde-4.html", alt: "Personer i livlig bymiljø" },

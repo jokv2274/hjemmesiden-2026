@@ -1,4 +1,4 @@
-![Tromme og langhus på Siberut](../Bilder%20forside/siberut-mentawai-tromme-langhus-2001-mittblikk.jpg "Tromme ved et langhus på Siberut.")
+![Tromme og langhus på Siberut](../Bilder%20forside/Ferie/Siberut/siberut-mentawai-tromme-langhus-2001-mittblikk.jpg "Tromme ved et langhus på Siberut.")
 
 Vi kom over etter kraftig regnvær. Overfarten gikk i en gammel trebåt med sprekker.
 

@@ -338,6 +338,17 @@
   line-height: 1.6;
 }
 
+.episode-next {
+  margin: 1rem 0 0;
+  color: #bfb7ac;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.episode-next strong {
+  color: #e7bd8b;
+}
+
 .placeholder-art {
   position: relative;
   display: grid;
@@ -465,13 +476,24 @@
     width: 88%;
   }
 
-  .cast-grid,
   .upcoming-grid {
     grid-template-columns: 1fr;
   }
 
+  .cast-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 0.75rem;
+  }
+
   .cast-card {
     min-height: auto;
+  }
+
+  .cast-card > img {
+    height: auto;
+    aspect-ratio: 2 / 3;
+    object-fit: cover;
+    object-position: center;
   }
 
   .episodes-heading {
@@ -495,6 +517,12 @@
 
   .placeholder-art {
     min-height: 180px;
+  }
+}
+
+@media (max-width: 360px) {
+  .cast-grid {
+    grid-template-columns: 1fr;
   }
 }
 
